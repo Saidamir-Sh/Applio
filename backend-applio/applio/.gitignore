@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development files
+.env
+*.sqlite3
+*.log
+
+# IDE-specific files
+.vscode/
+*.pyproj
+*.sln
+*.idea/
+
+# Dependency directories
+venv/
+env/
+pipenv/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Other
+*.DS_Store
