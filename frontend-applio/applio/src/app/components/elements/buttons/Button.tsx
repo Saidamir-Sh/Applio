@@ -21,17 +21,18 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(props, ref){
   const { type = 'button', className = '', variant = 'primary', size = 'md', isLoading = false } = props;
+  
   return (
     <button
-    ref={ref}
-    type={type}
-    className={clsx(
-        'flex justify-center items-center border border-gray-300 disabled:opacity-70 disabled:cursor-not-allowed rounded-md shadow-sm font-medium focus:outline-one hover:opacity-80',
-    variants[variant],
-    sizes[size],
-    className
-      )}
-    {...props}
+      ref={ref}
+      type={type}
+      className={clsx(
+          'flex justify-center items-center border border-gray-300 disabled:opacity-70 disabled:cursor-not-allowed rounded-md shadow-sm font-medium focus:outline-one hover:opacity-80',
+          variants[variant],
+          sizes[size],
+          className
+        )}
+      {...props}
     >
       {props.children}
     </button>
